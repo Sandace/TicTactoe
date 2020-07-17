@@ -156,7 +156,7 @@ public class Tictactoe implements ActionListener{
             }
         }
      //Diagonals
-        else if((s[0]==s[4]) && (s[4]==s[8]) && (s[0]!="")){
+        if((s[0]==s[4]) && (s[4]==s[8]) && (s[0]!="")){
             if(s[4]=="X"){
                 JOptionPane.showMessageDialog(f, "Player x won");
                }else{
