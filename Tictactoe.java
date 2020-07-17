@@ -136,55 +136,26 @@ public class Tictactoe implements ActionListener{
         };
         //Check for winnig conditions
         //rows
-       if((s[0]==s[1]) && (s[1]==s[2]) && (s[0]!="")) {
-           if(s[1]=="X"){
-            JOptionPane.showMessageDialog(f, "Player x won");
-           }else{
-            JOptionPane.showMessageDialog(f, "Player 0 won");
-           }
-           f.setEnabled(false);
-       }
-        else if((s[3]==s[4]) && (s[4]==s[5]) && (s[4]!="")){
-            if(s[4]=="X"){
+         for(int k=0;k<3;k++){
+            if(s[k*3]=="X" && s[k*3+1]=="X" && s[k*3+2]=="X"){		
                 JOptionPane.showMessageDialog(f, "Player x won");
-               }else{
-                JOptionPane.showMessageDialog(f, "Player 0 won");
-               }
-            f.setEnabled(false);
+                f.setEnabled(false);
+            }else if(s[k*3]=="O" && s[k*3+1]=="O" && s[k*3+2]=="O"){		
+                JOptionPane.showMessageDialog(f, "Player o won");
+                f.setEnabled(false);
+            }
         }
-        else if((s[6]==s[7]) && (s[7]==s[8]) && (s[6]!="")){
-            if(s[7]=="X"){
+     //Columns
+         for(int l=0;l<3;l++){
+            if(s[l]=="X" && s[l+3]=="X" && s[l+6]=="X"){		
                 JOptionPane.showMessageDialog(f, "Player x won");
-               }else{
-                JOptionPane.showMessageDialog(f, "Player 0 won");
-               }
-            f.setEnabled(false);
-        }//Columns
-        else if((s[0]==s[3]) && (s[3]==s[6]) && (s[0]!="")){
-            if(s[3]=="X"){
-                JOptionPane.showMessageDialog(f, "Player x won");
-               }else{
-                JOptionPane.showMessageDialog(f, "Player 0 won");
-               }
-            f.setEnabled(false);
+                f.setEnabled(false);
+            }else if(s[l]=="O" && s[l+3]=="O" && s[l+6]=="O"){		
+                JOptionPane.showMessageDialog(f, "Player o won");
+                f.setEnabled(false);
+            }
         }
-        else if((s[1]==s[4]) && (s[4]==s[7]) && (s[1]!="")){
-            if(s[4]=="X"){
-                JOptionPane.showMessageDialog(f, "Player x won");
-               }else{
-                JOptionPane.showMessageDialog(f, "Player 0 won");
-               }
-            f.setEnabled(false);
-        }
-        else if((s[2]==s[5]) && (s[5]==s[8]) && (s[2]!="")){
-            if(s[1]=="X"){
-                JOptionPane.showMessageDialog(f, "Player x won");
-               }else{
-                JOptionPane.showMessageDialog(f, "Player 0 won");
-               }
-            
-            f.setEnabled(false);
-        }//Diagonals
+     //Diagonals
         else if((s[0]==s[4]) && (s[4]==s[8]) && (s[0]!="")){
             if(s[4]=="X"){
                 JOptionPane.showMessageDialog(f, "Player x won");
