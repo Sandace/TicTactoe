@@ -200,6 +200,9 @@ public class Tictactoe implements ActionListener{
                 JOptionPane.showMessageDialog(f, "Player 0 won");
                }   
             f.setEnabled(false);
+        }else if(count>=10){
+             JOptionPane.showMessageDialog(f, "Draw");
+             f.setEnabled(false);
         }
     }
     public static void main(String[] args) {
